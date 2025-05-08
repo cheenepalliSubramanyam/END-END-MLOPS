@@ -86,9 +86,9 @@ def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str)
 
 def main():
     try:
-        # params = load_params(params_path='params.yaml')
-        # test_size = params['data_ingestion']['test_size']
-        test_size = 0.2
+        params = load_params(params_path='params.yaml')
+        test_size = params['data_ingestion']['test_size']    #this test size is used by param file
+        # test_size = 0.2                                    #this test size is used maually
         data_path = 'https://raw.githubusercontent.com/cheenepalliSubramanyam/Python_Oops/refs/heads/main/spam.csv'
         df = load_data(data_url=data_path)
         final_df = preprocess_data(df)
