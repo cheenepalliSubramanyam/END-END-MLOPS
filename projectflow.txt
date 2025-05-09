@@ -118,3 +118,9 @@ with Live(save_dvc_exp=True) as live:
     live.log_metric('recall', recall_score(y_test, y_test))
 
     live.log_params(params)
+
+
+
+    Extras:
+    >remove/delete aws resources like s3 bucket by going to buckets option in aws
+    >Adding stage to dvc.yaml:"dvc stage add -n data_ingestion.py -o data/raw python src/data_ingestion.py"
