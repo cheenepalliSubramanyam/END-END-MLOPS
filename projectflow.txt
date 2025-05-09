@@ -28,11 +28,30 @@ Expermients with DVC:
 
 
 
+Adding a remote S3storage to DVC
+
+19>(sign in to AWS console)
+20>create an IAM user(straight forward process)
+21>create S3(create unique name and create)
+22>pip install dvc[S3]
+23>pip install awscli
+24>"aws configure" - on terminal
+25>dvc remote add -d dvcstore s3://bucketname
+26>dvc commit -push the exp outcome that you want to keep
+27>finally git add commit push
 
 
 
 
 
+
+My Note:
+
+-first we create the projecct setup like data ingestion,model building etc with or without params.yaml and we create dvc.yaml file for staging the each steps
+-then we setup dvc live and experiment tracing with dvc live
+-then we setup the IAM and S3 buckert setup in AWS
+-then by using terminal we configure our acces keys and secret keys to push the code into AWS using aws configure command line
+-then by dvc  commit and dvc push we push the project to AWS
 
 
 
